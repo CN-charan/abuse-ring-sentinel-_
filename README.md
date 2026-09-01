@@ -30,8 +30,10 @@ don't reveal fraud, but their connections do.
 |---|---|
 | 1. Data | Generates 2,000 synthetic accounts — 95% normal (with some realistic innocent noise, e.g. households sharing IP/address), 5% split across 15 abuse rings sharing device_id/card in a staggered pattern (not every member shares with every other member) |
 | 2. Graph | Builds a weighted graph — accounts as nodes, shared attributes as edges. Low weight (0.2) for IP/address (could be innocent), high weight (0.9) for device_id/card (rarely innocent) |
-| 3. Detection | Finds connected clusters (`connected_components`), flags a cluster as a ring only if its *average edge weight* crosses a threshold — this is what protects a household of 5 from being flagged the same as a ring and [Ring visualization](ring_visualization.png)|
+| 3. Detection | Finds connected clusters (`connected_components`), flags a cluster as a ring only if its *average edge weight* crosses a threshold — this is what protects a household of 5 from being flagged the same as a ring|
 | 4. Evaluation | Compares flags against ground truth: precision, recall, F1, and false-positive/false-negative cost |
+
+![Ring visualization](ring_visualization.png)
 
 ## Results
 
