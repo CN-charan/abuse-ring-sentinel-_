@@ -35,6 +35,16 @@ don't reveal fraud, but their connections do.
 
 ## Results
 
+Precision: 1.000 (zero innocent accounts wrongly flagged)
+Recall: 0.780 (caught 78 of 100 actual ring members)
+F1 Score: 0.876
+Accuracy: 0.989 (misleading alone — 95% of accounts are non-fraud anyway)
+
+Estimated cost: $2,200 total
+False positives: 0 ($0)
+False negatives: 22 ($2,200 — all missed ring members, no false alarms)
+
+
 *(Cost figures — $10/false positive, $100/false negative — are illustrative
 assumptions for demonstrating cost-aware evaluation, not researched
 real-world figures.)*
